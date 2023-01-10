@@ -24,9 +24,19 @@ body {
     @apply text-3xl font-bold;
 }
 
+
 .secondary-title::before {
     content: "";
     @apply block w-12 h-2 bg-theme rounded-full mb-1;
+}
+
+.secondaryy-title {
+    @apply text-3xl font-bold;
+}
+
+.secondaryy-title::before {
+    content: "";
+    @apply block m-auto w-12 h-2 bg-theme rounded-full mb-2;
 }
 
 .section-paragraph {
@@ -35,6 +45,10 @@ body {
 
 .badge {
     @apply px-4 py-2 text-sm rounded bg-badge;
+}
+
+.career {
+    @apply px-4 py-2 text-sm rounded-full bg-selected-text
 }
 
 [id] {
@@ -59,4 +73,34 @@ body {
 
 .nav-dot:hover span {
     opacity: 1;
+}
+
+.hiddden {
+    opacity: 0;
+}
+
+.fadee {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+}
+
+.flyinr {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.flyinl {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(+100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }

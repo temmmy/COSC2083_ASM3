@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'body': '#17171F',
-        'selected-text': "#A3A3FF",
-        'theme': "#3F3FFF",
+        'body': '#151410',
+        'selected-text': "#62B6B7",
+        'theme': "#97DECE",
         'nav': "#404053",
         "secondary": "#9191A4",
         "badge": "#3F3F51",

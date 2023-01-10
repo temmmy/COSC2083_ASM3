@@ -1,7 +1,23 @@
 <script>
+    import { onMount } from 'svelte';
+    import {isOverlayOpen, Noverlay} from '../stores/OverlayStore'
+
+    onMount(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } 
+            })
+        })
+        const hiddenElements = document.querySelectorAll('.fadee, .flyinr, .flyinl')
+        hiddenElements.forEach((el) => observer.observe(el))
+	});
+    
 </script>
 <head>
-    <title>SIUUUUUUUU</title>
+    <title>Nikitech</title>
 </head>
 <body class="bg-body text-white pb-12 scrollbar">
     <!-- Home Page -->
@@ -9,10 +25,9 @@
         <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
             <div class="text-2xl font-bold">Nikitech Inc.</div>
             <div>
-                <div class="hidden md:flex space-x-12 items-center">
+                <div class="md:flex space-x-12 items-center">
                     <a href="#" class="text-selected-text">Home</a>
                     <a href="#" class="">Our Team</a>
-                    <a href="#">Tools</a>
                     <a href="#">Project Description</a>
                     <a href="#">Skills and Jobs</a>
                     <a href="#">Project Outcomes</a>
@@ -47,7 +62,7 @@
                     </a>
                 </div>
             </nav>
-            <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
+            <div class="hiddden fadee flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
                 <h1 class="font-bold text-5xl md:text-6xl lg:text-8xl text-center md:text-left">Helping<br> businesses to grow.</h1>
                 <div class="w-full flex justify-center md:justify-start">
                     <button class="px-8 py-4 rounded-full bg-theme text-white font-bold mt-12 flex items-center space-x-3">
@@ -61,7 +76,7 @@
                     </button>
                 </div>
             </div>
-        <img src="src/routes/img/AI.png" alt="brain" class="w-2/4 h-2/4 mx-auto mt-10 right-0">
+        <img src="src/routes/img/AI.png" alt="brain" class="fadee w-2/4 h-2/4 mx-auto mt-10 right-0">
         </div>
     </div>
     <!-- Our Team -->
@@ -69,11 +84,11 @@
     <div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <section class="w-full">
             <h2 id="clients" class="secondary-title">Our Team</h2>
-            <p class="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
+            <p class="section-paragraph">We are a team of talented and passionate IT world students. As a good team, we ensure good communication between each member, freely share our thoughts, opinions, ideas as well as taking into consideration what others have to say. Everyone contributes their fair share of the workload and offers each other support whenever and wherever it is needed. Our team is focused on goals and results, but most importantly we have fun and we are friends.</p>
 
             <!-- Members -->
             <div class="space-y-12 my-16">
-                <div class="w-full border rounded-full border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center flex-wrap lg:flex-nowrap">
+                <div class="flyinr wfull border rounded-full border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center flex-wrap lg:flex-nowrap">
                     
                     <!-- Member image -->
                     <div class="self-center mb-6 lg:mb-0">
@@ -87,13 +102,14 @@
                         <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
                             <div class="badge">Mr. CEO</div>
                             <div class="badge">Machine Learning Development</div>
+                            <button class="career transform transition duration-300 hover:scale-110">Career Plan</button>
                         </div>
 
-                        <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti delectus, alias molestias nisi ab nesciunt dignissimos illo expedita necessitatibus nihil itaque, nostrum porro quod quae voluptatum ea rerum iure sunt aperiam totam perferendis debitis illum accusantium et. Libero quibusdam ea iusto vero sint aspernatur cumque natus illo delectus, dolores est, optio sed velit fuga, earum quam aliquid repellendus. Eligendi fugiat praesentium dolorem nobis velit voluptate error vitae minima quas itaque?</p>
+                        <p class="text-secondary">Nguyen Chi Nghia ( s3979170 ). As of January 2023, I am currently a freshman at RMIT University. Up until recently I had been living in Russia, where I was taught coding and where I fell in love with the IT industry in general. One of the fastest-growing sectors worldwide that never stands still, provides interesting, challenging problems and a variety of career opportunities. I tried to follow different IT roadmaps (Game-Development, Web-Development), but so far finding Data Science to be the most suitable one. In my leisure time, I really enjoy reading, hanging out with my friends as well as working on personal projects.</p>
                     </div>
 
                 </div>
-                <div class="w-full border rounded-lg border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+                <div class="flyinl w-full border rounded-lg border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
                 
                     <!-- Member image -->
                     <div class="mb-6 lg:mb-0">
@@ -107,13 +123,15 @@
                         <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
                             <div class="badge">UI/UX</div>
                             <div class="badge">Front-End Development</div>
+                            <button class="career transform transition duration-300 hover:scale-110">Career Plan</button>
                         </div>
 
-                        <p class="text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus soluta velit rerum ut nobis ea optio deserunt rem obcaecati voluptatibus laboriosam temporibus sequi tempora, delectus excepturi voluptas pariatur quaerat consectetur inventore distinctio doloremque hic! Nisi, dolor. Reprehenderit natus minima ad nam repellat explicabo amet libero officia dignissimos eum consequuntur, aliquid, reiciendis omnis accusantium suscipit et, sed quam adipisci! Dolor eligendi tempore porro ut. Eius fuga numquam non hic ut laboriosam.</p>
+                        <p class="text-secondary">Luong Tuan Kiet (s3980288). Freshman at RMIT University 2023. Ever since I was a kid, I’ve always been fascinated by how computers operate and what values they bring to life. When I got my first personal computer, my passion for IT only grew stronger, and as a result, I started doing more and more research about this field. Everyday learning something new about IT truly makes me feel that I chose the right profession. For this reason, I’ve decided to choose Computer Science as a career path.
+                        </p>
                     </div>
 
                 </div>
-                <div class="w-full border rounded-full  border-nav  p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+                <div class="flyinr w-full border rounded-full  border-nav  p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
                     
                     <!-- Member Image -->
                     <div class="mb-6 lg:mb-0">
@@ -127,13 +145,14 @@
                         <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
                             <div class="badge">Human Resources</div>
                             <div class="badge">Data Analytics</div>
+                            <button class="career transform transition duration-300 hover:scale-110">Career Plan</button>
                         </div>
 
-                        <p class="text-secondary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde delectus cumque, fuga sequi suscipit accusamus cum quaerat ad? Praesentium doloribus minus assumenda iure repudiandae saepe nulla tempore obcaecati laboriosam quidem, blanditiis adipisci magnam minima, suscipit neque reprehenderit beatae libero dicta tenetur a repellendus dolorem incidunt. Magni soluta quibusdam perspiciatis corrupti esse saepe veritatis est, quo, ducimus aut, vel aliquid! Molestias, fuga ipsa? Est vel provident molestiae architecto officiis dicta corrupti?</p>
+                        <p class="text-secondary">Phan Nguyen Viet Nhan (s3978145). I am a first year student at RMIT Vietnam. Prior to learning to code, my heart was only big enough for basketball, a fast-paced sport that emphasizes teamwork and focus. However, after progressing through the course to gain a better understanding of contemporary information technology areas, I started to get attracted to this new knowledge, which drove me to explore and be curious about this field.Not to mention programing and basketball have alot in common as both require great precision, agility, quick processing, and superb team coordination.</p>
                     </div>
 
                 </div>
-                <div class="w-full border rounded-lg border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+                <div class="flyinl w-full border rounded-lg border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
                     
                     <!-- Member image -->
                     <div class="mb-6 lg:mb-0">
@@ -147,14 +166,70 @@
                         <div class="w-full lg:w-auto flex flex-wrap justify-center lg:justify-start gap-3 mt-6 mb-8">
                             <div class="badge">Data Visualization</div>
                             <div class="badge">Business Intelligence</div>
+                            <button class="career transform transition duration-300 hover:scale-110">Career Plan</button>
                         </div>
 
-                        <p class="text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo deserunt omnis aliquid, dolor expedita laborum doloremque velit quaerat perspiciatis asperiores aspernatur suscipit, illum aut fugit soluta excepturi pariatur repellendus dolores non incidunt temporibus error. Corporis architecto sint nihil, nam at ducimus earum! Facilis error quidem rerum quo dignissimos doloribus non fugiat unde fuga, corporis modi hic exercitationem adipisci labore similique laboriosam quisquam impedit recusandae dolorem autem odit saepe natus maxime.</p>
+                        <p class="text-secondary">Tran Nhat Minh (s3977767). Currently at the moment, I am a freshman at RMIT University, majoring in IT. I have always been interested in technology and have a strong passion for IT. My interests include programming, machine learning and artificial intelligence. I am always looking to learn more and expand my knowledge in this field and also ready to use my skills and experience to help others with their IT-related questions and problems.</p>
                     </div>
 
                 </div>
             </div>
 
+        </section>
+    </div>
+    <div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <section class="w-full">
+            <h2 id="clients" class="text-center m-auto secondaryy-title">Project Description</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 1}} type="button" class='relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1581934932994-e4ac37c0c882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" class="w-full brightness-50  rounded-3xl  bg-nav h-36 lg:h-60  drop-shadow-2xl  object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Topic</h3>
+                </button>
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 2}} type="button"  class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Motivation</h3>
+                </button>    
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 3}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl hidden md:block bg-nav h-60 lg:h-60  drop-shadow-2xl object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Landscape</h3>
+                </button>    
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 4}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80" class="w-full brightness-50 rounded-3xl hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Aims</h3>
+                </button>    
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 5}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80" class="w-full brightness-50 rounded-3xl hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Plans</h3>
+                </button>   
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 6}} type="button" class= 'relative trasnform transition duration-500 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1624557835271-306e581b1496?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Progress</h3>
+                </button>    
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 7}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1588412079929-790b9f593d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Roles</h3>
+                </button>    
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 8}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1516867155773-0a95d01e4b77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Scope/Limits</h3>
+                </button>    
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 9}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1613206485381-b028e578e791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block md:col-span-2 lg:col-span-1 bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Tools & Technologies</h3>
+                </button>
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 10}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1535161531861-4a5d0a14bf40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness-50  bg-nav h-36 lg:h-60 object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Testing</h3>
+                </button>
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 11}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'> 
+                    <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" class="w-full brightness-50 rounded-3xl brightness-50  bg-nav h-36 lg:h-60 object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Risks</h3>
+                </button>
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 12}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'> 
+                    <img src="https://images.unsplash.com/photo-1544717301-9cdcb1f5940f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness-50  bg-nav h-36 lg:h-60 object-cover">
+                    <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Communication</h3>
+                </button>
+            </div>
         </section>
     </div>
 </body>
