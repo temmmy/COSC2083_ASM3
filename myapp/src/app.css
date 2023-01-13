@@ -5,6 +5,7 @@
 html,
 body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -103,4 +104,13 @@ body {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+/* Moving Div */
+:global(.moving-div) {
+    padding: 2rem 5rem
+}
+
+:global(.moving-div > .inner-div) {
+    transition: transform .25s !important
 }

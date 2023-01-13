@@ -34,6 +34,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/nunito": "^4.5.11"
+		"@fontsource/nunito": "^4.5.11",
+		"svelte-moving-div": "^1.0.7"
 	}
 }
