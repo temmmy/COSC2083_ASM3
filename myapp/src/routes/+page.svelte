@@ -49,8 +49,7 @@
                     <a href="#" class="text-selected-text">Home</a>
                     <a href="#team" class="">Our Team</a>
                     <a href="#project">Project & Description</a>
-                    <a href="#skills">Skills & Jobs</a>
-                        <a href="#hire"><button class="px-6 py-2 bg-selected-text rounded-md font-bold">Hire us</button></a>
+                        <a href="#hire"><button class="px-6 py-2 bg-selected-text rounded-md font-bold">Contact us</button></a>
                 </div>
             </div>
             <div class="md:hidden">
@@ -60,22 +59,19 @@
     </header>
     <div class="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <div class="flex flex-wrap md:flex-nowrap">
-            <nav class="inline-block mt-32 lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
+            <nav class="inline-block mt-48 lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
                 <div class="absolute left-50 transform -translate-x-1/2 space-y-6 mt-37">
-                    <a href="#" class="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                    <a href="#" class="nav-dot selected-circle block w-9 h-9 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
                     </a>
-                    <a href="#team" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                    <a href="#team" class="nav-dot block w-9 h-9 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black  px-2 py-1 rounded-md ml-10 opacity-0">Our_Team</span>
                     </a>
-                    <a href="#project" class="nav-dot  block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                    <a href="#project" class="nav-dot  block w-9 h-9 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Project_Description</span>
                     </a>
-                    <a href="#skills" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Skills_Jobs</span>
-                    </a>
-                    <a href="#hire" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Hire_us</span>
+                    <a href="#hire" class="nav-dot block w-9 h-9 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Contact_us</span>
                     </a>
                 </div>
             </nav>
@@ -196,12 +192,13 @@
     <div class="container mt-32 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <section class="w-full">
             <h2 id="project" class="text-center m-auto secondaryy-title">Project & Description</h2>
+            <p class="text-secondary block text-center m-auto"><a href='https://github.com/temmmy/IntroToIT'><strong>Full report</strong></a> you can read on our github page</p>
             <div class="block m-auto mt-16 mb-32 max-w-md   bg-white border border-gray-200 rounded-lg shadow-md dark:bg-theme dark:border-selected-text">
                 <a href="#">
                     <img class="rounded-t-lg" src="src/routes/img/sales.jpg" alt="" />
                 </a>
                 <div class="p-5">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">NikiSales Prototype v0.1</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Sales Predictor Prototype v0.1</h5>
                     <a href="https://colab.research.google.com/drive/1YI4CDWcbRqcuCZ3HQ17S2VyOgtZ9_XmO?usp=sharing" class="inline-flex items-center px-3 py-2 text-sm font-bold text-center  text-white bg-theme rounded-lg hover:bg-selected-text focus:ring-4 focus:outline-none focus:ring-theme dark:bg-green-300 dark:hover:bg-selected-text dark:focus:ring-selected-text">
                         Open
                         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -218,31 +215,31 @@
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Motivation</h3>
                 </button>    
                 <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 3}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl hidden md:block bg-nav h-60 lg:h-60  drop-shadow-2xl object-cover">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl  bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Landscape</h3>
                 </button>    
                 <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 4}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
-                    <img src="https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80" class="w-full brightness-50 rounded-3xl hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
+                    <img src="https://images.unsplash.com/photo-1564993719576-7b00be6317cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80" class="w-full brightness-50 rounded-3xl  bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Aims</h3>
                 </button>    
                 <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 5}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80" class="w-full brightness-50 rounded-3xl hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80" class="w-full brightness-50 rounded-3xl  bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Plans</h3>
                 </button>   
-                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 6}} type="button" class= 'relative trasnform transition duration-500 hover:scale-110'>
-                    <img src="https://images.unsplash.com/photo-1624557835271-306e581b1496?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
+                <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 6}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
+                    <img src="https://images.unsplash.com/photo-1624557835271-306e581b1496?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" class="w-full brightness-50 rounded-3xl   bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover"> 
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Progress</h3>
                 </button>    
                 <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 7}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
-                    <img src="https://images.unsplash.com/photo-1588412079929-790b9f593d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
+                    <img src="https://images.unsplash.com/photo-1588412079929-790b9f593d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="w-full brightness-50 rounded-3xl  bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Roles</h3>
                 </button>    
                 <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 8}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
-                    <img src="https://images.unsplash.com/photo-1516867155773-0a95d01e4b77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
+                    <img src="https://images.unsplash.com/photo-1516867155773-0a95d01e4b77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Scope/Limits</h3>
                 </button>    
                 <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 9}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
-                    <img src="https://images.unsplash.com/photo-1613206485381-b028e578e791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness-50 hidden md:block md:col-span-2 lg:col-span-1 bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
+                    <img src="https://images.unsplash.com/photo-1613206485381-b028e578e791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="w-full brightness-50 rounded-3xl brightness-50  bg-nav h-36 lg:h-60  drop-shadow-2xl object-cover">
                     <h3 class='absolute text-4xl font-bold text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Tools & Technologies</h3>
                 </button>
                 <button on:click={() => {isOverlayOpen.set(true); Noverlay.n = 10}} type="button" class= 'relative trasnform transition duration-300 hover:scale-110'>
@@ -260,18 +257,11 @@
             </div>
         </section>
     </div>
-    <!-- Skills & Jobs -->
-    <div class="container mt-40 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-        <section class="w-full">
-            <h2 id="skills" class="secondary-title">Skills and Jobs</h2>
-        </section>
-    </div>
     <!-- Hire us -->
     <div class="container mt-40 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <section class="w-full flyinl">
-            <h2 id="hire" class="secondary-title">Hire us</h2>
+            <h2 id="hire" class="secondary-title">Contact us</h2>
             <p class="section-paragraph">If you are interested and have any further questions regarding the project please do not hesitate to contact us. We will get back to you as soon as possible</p>
-
 				<div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-32 mt-24">
 					<div class="space-y-12">
 						<div>
