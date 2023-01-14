@@ -29,10 +29,7 @@
         updateList();
     });
 
-	});
-
-  
-    
+	});    
 </script>
 <head>
     <title>Nikitech</title>
@@ -283,7 +280,6 @@
 						<!-- Contact info -->
 						<p class="text-secondary">XXX-XXX-XXX</p>
 						<a href="mailto:email@mydomain.com" class="text-secondary underline mt-3 block">Nikitech@HDgrade.com</a>
-
 					</div>
 				</div>
         </section>
@@ -292,4 +288,3 @@
         <footer class="block m-auto text-secondary"> <small>&copy; Copyright 2023, Nikitech Inc.</small> </footer> 
     </div>
 </body>
-
