@@ -1,23 +1,23 @@
 {
-  "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/nunito-latin-ext-400-normal-a8aed46d.woff2",
-    "src": "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2"
+  "node_modules/@fontsource/nunito/files/nunito-cyrillic-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/nunito-cyrillic-ext-400-normal-29a4d00e.woff2",
+    "src": "node_modules/@fontsource/nunito/files/nunito-cyrillic-ext-400-normal.woff2"
   },
   "node_modules/@fontsource/nunito/files/nunito-cyrillic-400-normal.woff2": {
     "file": "_app/immutable/assets/nunito-cyrillic-400-normal-ce5142e3.woff2",
     "src": "node_modules/@fontsource/nunito/files/nunito-cyrillic-400-normal.woff2"
   },
-  "node_modules/@fontsource/nunito/files/nunito-vietnamese-400-normal.woff2": {
-    "file": "_app/immutable/assets/nunito-vietnamese-400-normal-7ed3b3e7.woff2",
-    "src": "node_modules/@fontsource/nunito/files/nunito-vietnamese-400-normal.woff2"
-  },
-  "node_modules/@fontsource/nunito/files/nunito-cyrillic-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/nunito-cyrillic-ext-400-normal-29a4d00e.woff2",
-    "src": "node_modules/@fontsource/nunito/files/nunito-cyrillic-ext-400-normal.woff2"
+  "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/nunito-latin-ext-400-normal-a8aed46d.woff2",
+    "src": "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2"
   },
   "node_modules/@fontsource/nunito/files/nunito-latin-400-normal.woff2": {
     "file": "_app/immutable/assets/nunito-latin-400-normal-5e2f97ea.woff2",
     "src": "node_modules/@fontsource/nunito/files/nunito-latin-400-normal.woff2"
+  },
+  "node_modules/@fontsource/nunito/files/nunito-vietnamese-400-normal.woff2": {
+    "file": "_app/immutable/assets/nunito-vietnamese-400-normal-7ed3b3e7.woff2",
+    "src": "node_modules/@fontsource/nunito/files/nunito-vietnamese-400-normal.woff2"
   },
   "node_modules/@fontsource/nunito/files/nunito-all-400-normal.woff": {
     "file": "_app/immutable/assets/nunito-all-400-normal-02df670f.woff",
