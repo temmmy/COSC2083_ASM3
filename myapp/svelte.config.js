@@ -11,12 +11,9 @@ const config = {
 			precompress: false,
 			strict: true,
 			fallback: 'index.html',
-		})
+		}),
 	},
 	preprocess: vitePreprocess(),
-	paths: {
-		base: "/IntroToIT"
-	}
 };
 
 export default config;
