@@ -88,7 +88,7 @@
                     </button>
                 </div>
             </div>
-            <img src="src/routes/img/AI.png" alt="brain" class="fadee w-2/4 h-2/4 mx-auto mt-10 right-0 transform transition duration-100 hover:scale-125">
+            <img src="/AI.png" alt="braidn" class="fadee w-2/4 h-2/4 mx-auto mt-10 right-0 transform transition duration-100 hover:scale-125">
         </div>
     </div>
     <!-- Our Team -->
@@ -104,7 +104,7 @@
                     
                     <!-- Member image -->
                     <div class="self-center mb-6 lg:mb-0">
-                        <img class="self-center max-w-fit w-72 h-72 rounded-full" src="src/routes/img/nghia.png" alt="ayo">
+                        <img class="self-center max-w-fit w-72 h-72 rounded-full" src="/nghia.png" alt="ayo">
                     </div>
 
                     <!-- Member info -->
@@ -124,7 +124,7 @@
                 
                     <!-- Member image -->
                     <div class="mb-6 lg:mb-0">
-                        <img class="max-w-fit w-72 h-72  rounded-full" src="src/routes/img/kiet.png" alt="ayo">
+                        <img class="max-w-fit w-72 h-72  rounded-full" src="/kiet.png" alt="ayo">
                     </div>
 
                     <!-- Member Info -->
@@ -145,7 +145,7 @@
                     
                     <!-- Member Image -->
                     <div class="mb-6 lg:mb-0">
-                        <img class="max-w-fit w-72 h-72  rounded-full" src="src/routes/img/nhan.png" alt="ayo">
+                        <img class="max-w-fit w-72 h-72  rounded-full" src="/nhan.png" alt="ayo">
                     </div>
 
                     <!-- Member Logo -->
@@ -165,7 +165,7 @@
                     
                     <!-- Member image -->
                     <div class="mb-6 lg:mb-0">
-                        <img class="max-w-fit w-72 h-72  rounded-full"  src="src/routes/img/minh.png" alt="ayo">
+                        <img class="max-w-fit w-72 h-72  rounded-full"  src="/minh.png" alt="ayo">
                     </div>
 
                     <!-- Member info -->
@@ -192,7 +192,7 @@
             <p class="text-secondary block text-center m-auto"><a href='https://github.com/temmmy/IntroToIT'><strong>Full report</strong></a> you can read on our github page</p>
             <div class="block m-auto mt-16 mb-32 max-w-md   bg-white border border-gray-200 rounded-lg shadow-md dark:bg-theme dark:border-selected-text">
                 <a href="#">
-                    <img class="rounded-t-lg" src="src/routes/img/sales.jpg" alt="" />
+                    <img class="rounded-t-lg" src="/sales.jpg" alt="" />
                 </a>
                 <div class="p-5">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Sales Predictor Prototype v0.1</h5>
