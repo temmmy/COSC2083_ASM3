@@ -1,4 +1,8 @@
 {
+  "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2": {
+    "file": "_app/immutable/assets/nunito-latin-ext-400-normal-a8aed46d.woff2",
+    "src": "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2"
+  },
   "node_modules/@fontsource/nunito/files/nunito-cyrillic-400-normal.woff2": {
     "file": "_app/immutable/assets/nunito-cyrillic-400-normal-ce5142e3.woff2",
     "src": "node_modules/@fontsource/nunito/files/nunito-cyrillic-400-normal.woff2"
@@ -15,10 +19,6 @@
     "file": "_app/immutable/assets/nunito-latin-400-normal-5e2f97ea.woff2",
     "src": "node_modules/@fontsource/nunito/files/nunito-latin-400-normal.woff2"
   },
-  "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/nunito-latin-ext-400-normal-a8aed46d.woff2",
-    "src": "node_modules/@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2"
-  },
   "node_modules/@fontsource/nunito/files/nunito-all-400-normal.woff": {
     "file": "_app/immutable/assets/nunito-all-400-normal-02df670f.woff",
     "src": "node_modules/@fontsource/nunito/files/nunito-all-400-normal.woff"
@@ -31,10 +31,12 @@
     "file": "_app/immutable/assets/_page-3943746c.css",
     "src": "src/routes/+page.css"
   },
-  "_OverlayStore-f4070302.js": {
-    "file": "_app/immutable/chunks/OverlayStore-f4070302.js",
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-cb6de775.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
     "imports": [
-      "_index-7052c9b0.js"
+      "src/routes/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
@@ -53,12 +55,10 @@
       "src/routes/+layout.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-cb6de775.js",
-    "src": ".svelte-kit/generated/nodes/2.js",
-    "isDynamicEntry": true,
+  "_OverlayStore-f4070302.js": {
+    "file": "_app/immutable/chunks/OverlayStore-f4070302.js",
     "imports": [
-      "src/routes/+page.svelte"
+      "_index-7052c9b0.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
@@ -93,18 +93,6 @@
       ".svelte-kit/generated/nodes/2.js"
     ]
   },
-  "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-6ec7157e.js",
-    "src": "src/routes/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-7052c9b0.js",
-      "_OverlayStore-f4070302.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-3943746c.css"
-    ]
-  },
   "src/routes/+layout.svelte": {
     "file": "_app/immutable/components/pages/_layout.svelte-85a3580b.js",
     "src": "src/routes/+layout.svelte",
@@ -123,6 +111,18 @@
       "_app/immutable/assets/nunito-vietnamese-400-normal-7ed3b3e7.woff2",
       "_app/immutable/assets/nunito-latin-ext-400-normal-a8aed46d.woff2",
       "_app/immutable/assets/nunito-latin-400-normal-5e2f97ea.woff2"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "_app/immutable/components/pages/_page.svelte-6ec7157e.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-7052c9b0.js",
+      "_OverlayStore-f4070302.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-3943746c.css"
     ]
   }
 }
