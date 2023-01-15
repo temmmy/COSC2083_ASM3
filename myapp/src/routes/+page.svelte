@@ -2,7 +2,7 @@
     import { onMount } from 'svelte'
     import {isOverlayOpen, Noverlay} from '../stores/OverlayStore'
     import MovingDiv from 'svelte-moving-div'
-
+    import { base } from "$app/paths";
     onMount(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -29,7 +29,7 @@
         updateList();
     });
 
-	});    
+	});   
 </script>
 <head>
     <title>Nikitech</title>

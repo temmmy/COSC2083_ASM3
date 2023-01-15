@@ -3,7 +3,6 @@
     import "../app.css";
     import {isOverlayOpen, Noverlay} from "../stores/OverlayStore"
     import Overlay from "../components/Overlay.svelte"
-    export const prerender = true;
 </script>
 
 {#if $isOverlayOpen}
